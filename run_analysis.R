@@ -1,9 +1,9 @@
-#If(!file.exists("UCI Har Dataset")){
+if(!file.exists("UCI Har Dataset")){
   dir.create("UCI HAR Dataset")
   fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileurl,destfile="UCI-HAR-Dataset.zip")
   unzip("UCI-HAR-Dataset.zip")
-#}
+}
 
 # Merges the training and the test sets to create one data set.
 train_x <- read.table('./UCI HAR Dataset/train/X_train.txt')
